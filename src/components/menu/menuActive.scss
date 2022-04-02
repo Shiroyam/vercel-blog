@@ -1,0 +1,70 @@
+@use "./../../assets/scss/fonts.scss" as font;
+.menuActive {
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  z-index: 3;
+  .menuActive__content {
+    width: 400px;
+    height: 100vh;
+    background: #13315e;
+    position: fixed;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .menuActive__routes {
+      display: flex;
+      flex-direction: column;
+      .menuActive__headerName {
+        padding: 20px;
+        font-family: font.$textFont;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 26px;
+        line-height: 52px;
+        color: #ffffff;
+      }
+      .active {
+        background: rgba(255, 255, 255, 0.06);
+        border: none !important;
+      }
+      .menuActive__route {
+        cursor: pointer;
+        padding: 20px;
+        font-family: font.$textFont;
+        list-style-type: none;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 52px;
+        color: #ffffff;
+        text-decoration: none;
+      }
+    }
+    .menuActive__closeContainer {
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      height: 78px;
+      background: #0a2246;
+      .menuActive__header {
+        font-family: font.$textFont;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 17px;
+        line-height: 24px;
+        letter-spacing: 0.12em;
+        color: #ffffff;
+      }
+      .menuActive__icon {
+        color: #ffffff;
+        cursor: pointer;
+        margin-right: 5px;
+      }
+    }
+  }
+}

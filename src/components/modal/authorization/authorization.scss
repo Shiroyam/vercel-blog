@@ -1,0 +1,91 @@
+@use "./../../../assets/scss/fonts.scss" as font;
+@use "./../../../assets/scss/_mixin.scss" as mixin;
+.modal {
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .modal__content {
+    width: 446px;
+    height: 400px;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 40px;
+    .modal__headerContainer {
+      display: flex;
+      justify-content: space-between;
+      .modal__header {
+        font-family: font.$textFont;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 110%;
+        letter-spacing: -0.5px;
+        color: #373737;
+      }
+      .modal__close {
+        cursor: pointer;
+      }
+    }
+    .modal__inputEmail {
+      margin-top: 39px;
+      margin-bottom: 20px;
+      .modal__context{
+        font-family: font.$textFont;
+        padding-top: 2px;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 100%;
+        color: red;
+        padding-bottom: 8px;
+      }
+      .modal__headerEmail {
+        padding-bottom: 8px;
+        font-family: font.$textFont;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 100%;
+        color: #373737;
+      }
+      .modal__input {
+        @include mixin.input;
+      }
+    }
+    .modal__inputPassword {
+      margin-bottom: 20px;
+      .modal__context{
+        font-family: font.$textFont;
+        padding-top: 2px;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 100%;
+        color: red;
+        padding-bottom: 8px;
+      }
+      .modal__headerPassword {
+        padding-bottom: 8px;
+        font-family: font.$textFont;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 100%;
+        color: #373737;
+      }
+      .modal__input {
+        @include mixin.input;
+      }
+    }
+    .modal__button {
+      @include mixin.button;
+      font-family: font.$textFont;
+    }
+  }
+}

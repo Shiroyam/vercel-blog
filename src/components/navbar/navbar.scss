@@ -1,0 +1,40 @@
+@use "./../../assets/scss/fonts.scss" as font;
+.nav {
+  float: right;
+  display: flex;
+  flex-direction: column;
+  .nav__content {
+    margin-right: 100px;
+    display: flex;
+    justify-content: space-between;
+    width: 620px;
+    height: 67px;
+    border-bottom: 1px solid #f9f9f9;
+    border-left: 1px solid #f9f9f9;
+    padding: 18px;
+    .nav__header {
+      font-family: font.$textFont;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 16px;
+      line-height: 24px;
+      color: #0a3465;
+    }
+    .nav__icon {
+      .nav__iconSearch {
+        margin-right: 26px;
+        cursor: pointer;
+        color: #dedede;
+      }
+      .nav__iconPerson {
+        margin-right: 26px;
+        cursor: pointer;
+        color: #dedede;
+      }
+      .nav__iconCreate {
+        cursor: pointer;
+        color: #dedede;
+      }
+    }
+  }
+}

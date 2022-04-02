@@ -1,0 +1,38 @@
+@mixin input {
+  outline: none;
+  width: 366px;
+  height: 48px;
+  border: 1px solid #eeeeee;
+  border-radius: 12px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+@mixin button {
+  width: 366px;
+  height: 49px;
+  left: 537px;
+  top: 610px;
+  background: #ffdf36;
+  border-radius: 12px;
+  cursor: pointer;
+
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #68572d;
+}
+
+@mixin textarea {
+  background: #ffffff;
+  border: 1px solid #eceef1;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding-top: 5px;
+  padding-right: 5px;
+  padding-left: 5px;
+  resize: none;
+  outline: none;
+}

@@ -1,0 +1,88 @@
+@use "./../../assets/scss/fonts.scss"as font;
+@use "./../../assets/scss/mixin"as mixin;
+
+.comments {
+  margin-top: 10px;
+  width: 584px;
+  height: 120px;
+  border-bottom: 1px solid #f1f1f1;
+
+  .comments__header {
+    display: flex;
+    justify-content: space-between;
+
+    .comments__fullName {
+      font-family: font.$textFont;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 18px;
+      color: #373737;
+    }
+
+    .comments__date {
+      font-family: font.$dateFont;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 16px;
+      letter-spacing: 0.01em;
+      text-transform: uppercase;
+
+      color: #c1c1c1;
+    }
+  }
+
+  .comments__text {
+    width: 584px;
+    padding-top: 9px;
+    font-family: font.$textFont;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #373737;
+    padding-bottom: 5px;
+  }
+
+  .comments__textarea {
+    @include mixin.textarea;
+    width: 584px;
+    padding-top: 9px;
+    font-family: font.$textFont;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #373737;
+    padding-bottom: 5px;
+    outline: none;
+  }
+
+  .editing {
+    display: flex;
+
+    .editing__btnEditing {
+      @include mixin.button;
+      width: 90px;
+      height: 20px;
+      margin-right: 10px;
+      text-decoration: none;
+      font-family: font.$textFont;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    .editing__btnDeleted {
+      @include mixin.button;
+      width: 100px;
+      height: 20px;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}

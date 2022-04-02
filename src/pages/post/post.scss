@@ -1,0 +1,168 @@
+@use "./../../assets/scss/fonts.scss" as font;
+@use "./../../assets/scss/_mixin.scss" as mixin;
+.post {
+  width: 720px;
+  .post__headerContainer {
+    height: 452px;
+    background: #9b9a9a;
+    padding: 129px 70px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+    .post__dateContainer {
+      position: relative;
+      z-index: 1;
+      padding-bottom: 9px;
+      display: flex;
+      position: relative;
+      .post__date {
+        font-family: font.$dateFont;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0.01em;
+        text-transform: uppercase;
+        font-feature-settings: "tnum" on, "lnum" on;
+        color: #c1c1c1;
+      }
+      .post__iconContainer {
+        display: flex;
+        font-family: font.$dateFont;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0.01em;
+        text-transform: uppercase;
+        font-feature-settings: "tnum" on, "lnum" on;
+        color: #c1c1c1;
+        .post__icon {
+          height: 18px;
+        }
+      }
+    }
+    .post__headerText {
+      position: relative;
+      z-index: 1;
+      .post__header {
+        padding-bottom: 14px;
+        max-width: 600px;
+        font-family: font.$textFont;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 42px;
+        line-height: 52px;
+        color: #ffffff;
+      }
+      .post__description {
+        max-width: 590px;
+        font-family: font.$textFont;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: rgba(255, 255, 255, 0.7);
+      }
+    }
+  }
+  .post__textContainer {
+    padding: 72px 37px;
+    max-width: 584px;
+    .post__text {
+      font-family: font.$textFont;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 26px;
+      color: #000000;
+    }
+  }
+  .post__commentsContainer {
+    padding: 40px 37px;
+    .post__commentsHeader {
+      margin-bottom: 37px;
+      font-family: font.$textFont;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 24px;
+      color: #0a3465;
+    }
+    .post__comment {
+      margin-top: 10px;
+      width: 584px;
+      height: 99px;
+      border-bottom: 1px solid #f1f1f1;
+      .post__commentHeader {
+        display: flex;
+        justify-content: space-between;
+        .post__commentFullName {
+          font-family: font.$textFont;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 18px;
+          color: #373737;
+        }
+        .post__commentDate {
+          font-family: font.$dateFont;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 16px;
+          letter-spacing: 0.01em;
+          text-transform: uppercase;
+          font-feature-settings: "tnum" on, "lnum" on;
+          color: #c1c1c1;
+        }
+      }
+    }
+    .post__commentText {
+      padding-top: 9px;
+      font-family: font.$textFont;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+      color: #373737;
+    }
+  }
+  .post__commentsInputContainer {
+    width: 602px;
+    .post__commentsInputHeader {
+      margin-bottom: 9px;
+      font-family: font.$textFont;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      color: #0a3465;
+    }
+    .post__commentsInput {
+      @include mixin.textarea;
+
+      margin-bottom: 22px;
+      font-family: font.$textFont;
+      width: 602px;
+      height: 90px;
+    }
+    .post__commentsButton {
+      @include mixin.button;
+
+      margin-bottom: 10px;
+      float: right;
+      font-family: font.$textFont;
+      width: 130px;
+      height: 45px;
+    }
+  }
+}

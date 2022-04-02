@@ -1,0 +1,33 @@
+@use "./../../assets/scss/fonts.scss" as font;
+.menu {
+  .menu__content {
+    width: 100px;
+    height: 100vh;
+    background: #13315e;
+    position: fixed;
+    right: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    .menu__headerContainer {
+      .menu__header {
+        margin-bottom: 35px;
+        font-family: font.$textFont;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 17px;
+        line-height: 24px;
+        letter-spacing: 0.12em;
+        transform: rotate(-90deg);
+        color: #ffffff;
+      }
+      .menu__icon {
+        cursor: pointer;
+        margin: 35px;
+        width: 30px;
+        height: 25px;
+        color: #ffffff;
+      }
+    }
+  }
+}

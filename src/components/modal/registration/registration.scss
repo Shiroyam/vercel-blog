@@ -1,0 +1,117 @@
+@use "./../../../assets/scss/fonts.scss" as font;
+@use "./../../../assets/scss/_mixin.scss" as mixin;
+.modalReg {
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .modalReg__content {
+    width: 446px;
+    height: 550px;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 40px;
+    .modalReg__headerContainer {
+      display: flex;
+      justify-content: space-between;
+      .modalReg__header {
+        font-family: font.$textFont;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 110%;
+        letter-spacing: -0.5px;
+        color: #373737;
+      }
+      .modalReg__close {
+        cursor: pointer;
+      }
+    }
+    .modalReg__fullName {
+      margin-top: 36px;
+      margin-bottom: 30px;
+      .modalReg__context{
+        font-family: font.$textFont;
+        padding-top: 2px;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 100%;
+        color: red;
+        padding-bottom: 8px;
+      }
+      .modalReg__headerFullName {
+        padding-bottom: 8px;
+        font-family: font.$textFont;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 100%;
+        color: #373737;
+      }
+      .modalReg__input {
+        @include mixin.input;
+      }
+    }
+    .modalReg__inputEmail {
+      margin-bottom: 30px;
+      .modalReg__context{
+        font-family: font.$textFont;
+        padding-top: 2px;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 100%;
+        color: red;
+        padding-bottom: 8px;
+      }
+      .modalReg__headerEmail {
+        padding-bottom: 8px;
+        font-family: font.$textFont;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 100%;
+        color: #373737;
+      }
+      .modalReg__input {
+        @include mixin.input;
+      }
+    }
+    .modalReg__inputPassword {
+      margin-bottom: 30px;
+      .modalReg__context{
+        font-family: font.$textFont;
+        padding-top: 2px;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 100%;
+        color: red;
+        padding-bottom: 8px;
+      }
+      .modalReg__headerPassword {
+        padding-bottom: 8px;
+        font-family: font.$textFont;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 100%;
+        color: #373737;
+      }
+      .modalReg__input {
+        @include mixin.input;
+      }
+    }
+    .modalReg__button {
+      @include mixin.button;
+
+      font-family: font.$textFont;
+    }
+  }
+}

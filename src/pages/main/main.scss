@@ -1,0 +1,44 @@
+@use "./../../assets/scss/fonts.scss" as font;
+
+.main {
+  padding: 50px 68px;
+  width: 720px;
+  .main__headerContainer {
+    font-family: font.$textFont;
+    font-style: normal;
+    line-height: 52px;
+    .main__header {
+      font-weight: 800;
+      font-size: 72px;
+      color: #202020;
+    }
+    .main__description {
+      margin-top: 15px;
+      margin-bottom: 23px;
+      font-weight: 500;
+      font-size: 34px;
+      color: #aaaaaa;
+    }
+  }
+  .main__img {
+    width: 584px;
+    height: 422px;
+    border-radius: 10px;
+  }
+  .main__textContainer {
+    font-family: font.$textFont;
+    font-style: normal;
+    .main__headerText {
+      line-height: 52px;
+      font-weight: 700;
+      font-size: 24px;
+      color: #202020;
+    }
+    .main__text {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 28px;
+      color: #000000;
+    }
+  }
+}

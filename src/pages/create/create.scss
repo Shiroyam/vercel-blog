@@ -1,0 +1,123 @@
+@use "./../../assets/scss/fonts.scss" as font;
+@use "./../../assets/scss/_mixin.scss" as mixin;
+
+.create {
+  width: 602px;
+  height: 650px;
+  padding: 50px 68px;
+  .create__headerContainer {
+    .create__context {
+      font-family: font.$textFont;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 13px;
+      line-height: 100%;
+      color: red;
+    }
+    .create__headerInput {
+      height: 52px;
+      font-family: font.$textFont;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 42px;
+      line-height: 52px;
+      color: #d7d7d7;
+      outline: none;
+      resize: none;
+    }
+  }
+  .create__descriptionContainer {
+    margin-top: 25px;
+    .create__context {
+      font-family: font.$textFont;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 13px;
+      line-height: 100%;
+      color: red;
+    }
+    .create__header {
+      font-family: font.$textFont;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      color: #0a3465;
+    }
+    .create__input {
+      @include mixin.textarea;
+      width: 602px;
+      height: 90px;
+    }
+  }
+
+  .create__linkContainer {
+    width: 602px;
+    margin-top: 30px;
+    .create__header {
+      font-family: font.$textFont;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      color: #0a3465;
+    }
+    .create__form {
+      .create__context {
+        font-family: font.$textFont;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 100%;
+        color: red;
+      }
+      .create__container{
+        display: flex;
+        justify-content: space-between;
+        .create__input {
+        @include mixin.textarea;
+        width: 442px;
+        height: 45px;
+        margin-right: 15px;
+      }
+      .create__button {
+        @include mixin.button;
+
+        color: #ffffff;
+        background: #6fcf97;
+        width: 145px;
+        height: 45px;
+      }
+    }
+  }
+  }
+  .create__textContainer {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    .create__context {
+      font-family: font.$textFont;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 13px;
+      line-height: 100%;
+      color: red;
+    }
+    .create__header {
+      font-family: font.$textFont;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      color: #0a3465;
+    }
+    .create__input {
+      @include mixin.textarea;
+      width: 602px;
+      height: 330px;
+    }
+  }
+  .create__button {
+    @include mixin.button;
+    width: 160px;
+  }
+}
