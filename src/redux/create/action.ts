@@ -4,7 +4,7 @@ import { Dispatch } from "react";
 export const createPost = (data: any) => async (dispatch: Dispatch<any>) => {
   try {
     await axios.post(
-      "http://localhost:5656/posts",
+      "https://semyon-blog.herokuapp.com/posts",
       {
         title: data.title,
         text: data.text,

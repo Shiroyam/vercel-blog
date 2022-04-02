@@ -20,7 +20,7 @@ export const getPosts =
   export const getPostsProfile = () => async (dispatch: Dispatch<any>) => {
     try {
         const response = await axios.get(
-          `http://localhost:5656/posts`
+          `https://semyon-blog.herokuapp.com/posts`
         );
         dispatch({
           type: "GET_POSTS_PROFILE",

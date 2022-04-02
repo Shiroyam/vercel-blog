@@ -5,7 +5,7 @@ import { text } from "stream/consumers";
 export const getPostEditing =
   (id: string | undefined) => async (dispatch: Dispatch<any>) => {
     try {
-      const response = await axios.get(`http://localhost:5656/posts/${id}`);
+      const response = await axios.get(`https://semyon-blog.herokuapp.com/posts/${id}`);
       dispatch({
         type: "GET_POST_EDITING",
         payload: response.data,
@@ -18,7 +18,7 @@ export const getPostEditing =
 export const patchPost =
   (data: any, id: string | undefined) => async (dispatch: Dispatch<any>) => {
     await axios.patch(
-      `http://localhost:5656/posts/${id}`,
+      `https://semyon-blog.herokuapp.com/posts/${id}`,
       {
         title: data.title,
         text: data.text,
@@ -38,7 +38,7 @@ export const patchPost =
 
 export const deletePost =
   (id: string | undefined) => async (dispatch: Dispatch<any>) => {
-    await axios.delete(`http://localhost:5656/posts/${id}`, {
+    await axios.delete(`https://semyon-blog.herokuapp.com/posts/${id}`, {
       headers: {
         Authorization: `${localStorage.getItem("token")}`,
       },
@@ -51,7 +51,7 @@ export const deletePost =
 export const patchComment =
   (text: string, id: string | undefined) => async (dispatch: Dispatch<any>) => {
     await axios.patch(
-      `http://localhost:5656/comments/${id}`,
+      `https://semyon-blog.herokuapp.com/comments/${id}`,
       {
         text: text,
       },
@@ -68,7 +68,7 @@ export const patchComment =
 
 export const deleteComment =
   (id: string | undefined) => async (dispatch: Dispatch<any>) => {
-    await axios.delete(`http://localhost:5656/comments/${id}`, {
+    await axios.delete(`https://semyon-blog.herokuapp.com/comments/${id}`, {
       headers: {
         Authorization: `${localStorage.getItem("token")}`,
       },

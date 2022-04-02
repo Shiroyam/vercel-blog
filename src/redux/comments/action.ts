@@ -5,7 +5,7 @@ export const getCommentsPost =
   (id: string | undefined) => async (dispatch: Dispatch<any>) => {
     try {
       const response = await axios.get(
-        `http://localhost:5656/comments/post/${id}`
+        `https://semyon-blog.herokuapp.com/comments/post/${id}`
       );
       dispatch({
         type: "GET_COMMENTS_POST",
@@ -18,7 +18,7 @@ export const getCommentsPost =
 
 export const getCommentsAll = () => async (dispatch: Dispatch<any>) => {
   try {
-    const response = await axios.get(`http://localhost:5656/comments`);
+    const response = await axios.get(`https://semyon-blog.herokuapp.com/comments`);
     dispatch({
       type: "GET_COMMENTS_ALL",
       payload: response.data.items,
@@ -32,7 +32,7 @@ export const postComments =
   (data: any, id: string | undefined) => async (dispatch: Dispatch<any>) => {
     try {
       await axios.post(
-        "http://localhost:5656/comments",
+        "https://semyon-blog.herokuapp.com/comments",
         {
           text: `${data.comment}`,
           postId: `${id}`,

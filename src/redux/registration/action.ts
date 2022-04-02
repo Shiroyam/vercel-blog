@@ -15,7 +15,7 @@ export const closeReg = () => {
 
 export const postReg = (data: any) => async (dispatch: Dispatch<any>) => {
   try {
-    await axios.post("http://localhost:5656/auth/register", {
+    await axios.post("https://semyon-blog.herokuapp.com/auth/register", {
       fullName: data.fullName,
       email: data.email,
       password: data.password,

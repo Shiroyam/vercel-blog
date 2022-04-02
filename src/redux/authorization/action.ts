@@ -17,7 +17,7 @@ export const postAuthorization =
   (data: any) => async (dispatch: Dispatch<any>) => {
     try {
       const response = await axios
-        .post("http://localhost:5656/auth/login", {
+        .post("https://semyon-blog.herokuapp.com/auth/login", {
           email: data.email,
           password: data.password,
         })
