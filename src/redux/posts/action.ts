@@ -6,7 +6,7 @@ export const getPosts =
   async (dispatch: Dispatch<any>) => {
     try {
       const response = await axios.get(
-        `http://localhost:5656/posts?limit=4&query=${text}&page=${num}`
+        `https://semyon-blog.herokuapp.com/posts?limit=4&query=${text}&page=${num}`
       );
       dispatch({
         type: "GET_POSTS",
