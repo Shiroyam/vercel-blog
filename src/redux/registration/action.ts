@@ -15,7 +15,7 @@ export const closeReg = () => {
 
 export const postReg = (data: any) => async (dispatch: Dispatch<any>) => {
   try {
-    await axios.post("https://semyon-blog.herokuapp.com/auth/register", {
+    await axios.post("https://vercel-blog.vercel.app/auth/register", {
       fullName: data.fullName,
       email: data.email,
       password: data.password,

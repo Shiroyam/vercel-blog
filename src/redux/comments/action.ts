@@ -5,7 +5,7 @@ export const getCommentsPost =
   (id: string | undefined) => async (dispatch: Dispatch<any>) => {
     try {
       const response = await axios.get(
-        `https://semyon-blog.herokuapp.com/comments/post/${id}`
+        `https://vercel-blog.vercel.app/comments/post/${id}`
       );
       dispatch({
         type: "GET_COMMENTS_POST",
@@ -18,7 +18,7 @@ export const getCommentsPost =
 
 export const getCommentsAll = () => async (dispatch: Dispatch<any>) => {
   try {
-    const response = await axios.get(`https://semyon-blog.herokuapp.com/comments`);
+    const response = await axios.get(`https://vercel-blog.vercel.app/comments`);
     dispatch({
       type: "GET_COMMENTS_ALL",
       payload: response.data.items,
@@ -32,7 +32,7 @@ export const postComments =
   (data: any, id: string | undefined) => async (dispatch: Dispatch<any>) => {
     try {
       await axios.post(
-        "https://semyon-blog.herokuapp.com/comments",
+        "https://vercel-blog.vercel.app/comments",
         {
           text: `${data.comment}`,
           postId: `${id}`,

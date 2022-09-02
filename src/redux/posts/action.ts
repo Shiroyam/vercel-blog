@@ -6,7 +6,7 @@ export const getPosts =
   async (dispatch: Dispatch<any>) => {
     try {
       const response = await axios.get(
-        `https://semyon-blog.herokuapp.com/posts?limit=4&query=${text}&page=${num}`
+        `https://vercel-blog.vercel.app/posts?limit=4&query=${text}&page=${num}`
       );
       dispatch({
         type: "GET_POSTS",
@@ -20,7 +20,7 @@ export const getPosts =
   export const getPostsProfile = () => async (dispatch: Dispatch<any>) => {
     try {
         const response = await axios.get(
-          `https://semyon-blog.herokuapp.com/posts`
+          `https://vercel-blog.vercel.app/posts`
         );
         dispatch({
           type: "GET_POSTS_PROFILE",

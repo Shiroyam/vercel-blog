@@ -17,7 +17,7 @@ export const postAuthorization =
   (data: any) => async (dispatch: Dispatch<any>) => {
     try {
       const response = await axios
-        .post("https://semyon-blog.herokuapp.com/auth/login", {
+        .post("https://vercel-blog.vercel.app/auth/login", {
           email: data.email,
           password: data.password,
         })
