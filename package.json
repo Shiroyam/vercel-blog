@@ -44,6 +44,7 @@
     "start": "vercel dev",
     "server": "node server.js",
     "build": "react-scripts build",
+    "build:server": "serve -s build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
